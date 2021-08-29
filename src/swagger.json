@@ -1,0 +1,101 @@
+{
+  "openapi": "3.0.0",
+
+  "info": {
+    "title": "API do projetinho massa",
+    "description": "Jobs.Net API docs",
+    "version": "0.0.1"
+  },
+
+  "servers": [
+    {
+      "url": "http://localhost:5000",
+      "description": "ambiente de desenvolvimento"
+    }
+  ],
+
+  "paths": {
+    "/register": {
+      "post": {
+        "summary": "Cadastro de candidato",
+        "description": "Rota de cadastro de usuário",
+        "tags": ["candidato"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "job": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "type": "string"
+                  },
+                  "address": {
+                    "type": "string"
+                  },
+                  "neighborhood": {
+                    "type": "string"
+                  },
+                  "city": {
+                    "type": "string"
+                  },
+                  "cep": {
+                    "type": "string"
+                  },
+                  "cel": {
+                    "type": "string"
+                  },
+                  "phone": {
+                    "type": "string"
+                  },
+                  "phone2": {
+                    "type": "string"
+                  },
+                  "contact": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "rg": {
+                    "type": "string"
+                  },
+                  "cpf": {
+                    "type": "string"
+                  }
+                }
+              },
+              "examples": {
+                "Candidato": {
+                  "value": {
+                    "name": "Kali Reis",
+                    "job": "Software Engineer",
+                    "status": "Casada",
+                    "address": "Rua Anon",
+
+                    "neighborhood": "Mine",
+                    "city": "NotYourBeezwax",
+                    "cep": "000000-000",
+                    "cel": "xxxxxxxxxx",
+                    "phone": "xxxxxxxxx",
+
+                    "phone2": "xxxxxxxxxx",
+                    "contact": "xxxxxxxxxx",
+                    "email": "ashdas@ahsuahs.com",
+
+                    "rg": "123123123-1",
+                    "cpf": "12312312-2"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
